@@ -78,8 +78,8 @@ export default function TopMediaList({ tenantId }: { tenantId: string }) {
   }, [activeTab, tenantId])
 
   const formatWatchTime = (ms: number) => {
-    const hours = Math.floor(ms / 216000)
-    const minutes = Math.floor((ms % 216000) / 3600)
+    const hours = Math.floor(ms / 3600)
+    const minutes = Math.floor((ms % 3600) / 60)
     return `${hours}h ${minutes}m`
   }
 

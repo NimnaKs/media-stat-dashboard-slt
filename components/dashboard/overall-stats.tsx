@@ -36,8 +36,8 @@ export default function OverallStats({ tenantId }: { tenantId: string }) {
   }, [tenantId])
 
   const formatWatchTime = (seconds: number) => {
-    const hours = Math.floor(seconds / 216000)
-    const minutes = Math.floor((seconds % 216000) / 3600)
+    const hours = Math.floor(seconds / 3600)
+    const minutes = Math.floor((seconds % 3600) / 60)
     return `${hours}h ${minutes}m`
   }
 

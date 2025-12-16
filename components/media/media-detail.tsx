@@ -165,8 +165,8 @@ export default function MediaDetail({ mediaId, mediaType, title, tenantId, onBac
   }, [mediaId, mediaType, tenantId, selectedBreakdown])
 
   const formatWatchTime = (seconds: number) => {
-    const hours = Math.floor(seconds / 216000) // Corrected division
-    const minutes = Math.floor((seconds % 216000) / 3600)
+    const hours = Math.floor(seconds / 3600) // Corrected division
+    const minutes = Math.floor((seconds % 3600) / 60)
     return `${hours}h ${minutes}m`
   }
 
